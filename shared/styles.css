@@ -50,13 +50,6 @@ a:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #222);
   filter: drop-shadow(1px 1px 1px #222);
 }
-<<<<<<< HEAD
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 #navbar {
   display: flex;
@@ -157,7 +150,11 @@ form {
     text-align: left; /* Align labels to the left */
     margin-bottom: 5px;
 }
-
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    font-family: "Julius Sans One", sans-serif;
+}
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -204,7 +201,6 @@ button:hover {
     }
 }
 
-=======
 #container {
   margin-top: 2%;
   margin-left: 5%;
@@ -223,13 +219,13 @@ button:hover {
   font-size: 2em;
   color: gray;
   font-weight: 400;
+  font-family: "Julius Sans One", sans-serif;
 }
 
 .card-content {
-  padding: 0 2px 16px 0;
+  padding: 0px 2px 16px 0px;
 }
 
 .card a:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
->>>>>>> 6d75f05 (Edited the style sheet and ignored the .DS_Store on macs)
