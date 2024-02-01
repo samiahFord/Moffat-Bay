@@ -1,3 +1,16 @@
+<?php
+// Include the configuration file
+include 'config.php';
+
+// Create connection
+$con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,23 +35,6 @@
 
         </div>
         <div class="login-container">
-            <?php
-            $host = "localhost";
-            $port = 3306;
-            $socket = "";
-            $user = "root";
-            $password = "root";
-            $dbname = "MoffatBayLodge";
-
-            // Create connection
-            $con = new mysqli($host, $user, $password, $dbname, $port, $socket);
-
-            // Check connection
-            if ($con->connect_error) {
-                die("Connection failed: " . $con->connect_error);
-            }
-            // echo "Connected successfully"; // Commented out for production
-            ?>
             <form action="login.php/" method="post">
                 <div class="label-group">
                     <h2>Login:</h2><br>
@@ -61,4 +57,3 @@
     </main>
 </body>
 </html>
-
