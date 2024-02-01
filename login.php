@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Moffat Bay Lodge</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Added CSS link -->
-    <link rel="stylesheet" type="text/css" href="shared/styles.css">
+    <link href="shared/style.css"
+  type="text/css"
+  rel="stylesheet">
+    
 </head>
 <body>
     <?php
+    // Assuming navigation.html is in the "shared" folder
     readfile("shared/navigation.html");
     ?>
-        <a href="#">About Us</a>
-        <a href="#">Attractions</a>
-        <a href="/index.php"><img src="shared/transparent-logo.png" alt="Logo image"></a>
-        <a href="#">Reservations</a>
-        <a href="#">Registration</a>
-    </nav>
     <header>
         <h1>Welcome to Moffat Bay Lodge</h1>
     </header>
     <main>
         <div class="image-container">
-            <img src="shared/moffat_bay_lodge_image.jpg" alt="Moffat Bay Lodge">
+           <img src="shared/Moffat_Bay_Lodge.jpeg" alt="Moffat Bay Lodge">
+
         </div>
         <div class="login-container">
             <?php
@@ -45,7 +42,7 @@
             ?>
             <form action="login.php" method="post">
                 <div class="label-group">
-                    <h2>Login:</h2>
+                    <h2>Login:</h2><br>
                     <label for="email">Enter your email address:</label>
                 </div>
                 <input type="email" id="email" name="email" required><br>
