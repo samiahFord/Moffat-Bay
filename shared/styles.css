@@ -44,11 +44,13 @@
   text-decoration: none;
   font-size: large;
 }
+
 a:hover {
   padding: 0px 50px;
   -webkit-filter: drop-shadow(1px 1px 1px #222);
   filter: drop-shadow(1px 1px 1px #222);
 }
+<<<<<<< HEAD
 
 * {
   margin: 0;
@@ -202,3 +204,32 @@ button:hover {
     }
 }
 
+=======
+#container {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 50%;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 2em;
+  color: gray;
+  font-weight: 400;
+}
+
+.card-content {
+  padding: 0 2px 16px 0;
+}
+
+.card a:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+>>>>>>> 6d75f05 (Edited the style sheet and ignored the .DS_Store on macs)
