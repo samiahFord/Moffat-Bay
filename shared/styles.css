@@ -1,3 +1,6 @@
+/* styles.css */
+
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -46,3 +49,156 @@ a:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #222);
   filter: drop-shadow(1px 1px 1px #222);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100px;
+  background-color: #8a9f9c;
+  font-family: "Julius Sans One", sans-serif;
+  filter: drop-shadow(1px 2px 2px #414b4a);
+}
+#login {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  background-color: #8a9f9c;
+  font-family: "Julius Sans One", sans-serif;
+}
+#login a {
+  padding: 0px 50px;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+#navbar img {
+  width: 125px;
+  height: 125px;
+  -webkit-filter: drop-shadow(1px 1px 1px #222);
+  filter: drop-shadow(1px 1px 1px #222);
+}
+#navbar a {
+  padding: 0px 50px;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+a:hover {
+  padding: 0px 50px;
+  -webkit-filter: drop-shadow(1px 1px 1px #222);
+  filter: drop-shadow(1px 1px 1px #222);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure full height */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+/* Position image container to the left */
+.image-container {
+    width: 45%; /* Adjust width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Position login container to the right */
+.login-container {
+    text-align: center;
+    width: 45%; /* Adjust width as needed */
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.label-group {
+    text-align: left; /* Align labels to the left */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Align forgot links to the right */
+.forgot-link {
+    float: right;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+    footer {
+        padding: 10px;
+    }
+    main {
+        padding: 10px;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .login-container,
+    .image-container {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center;
+    }
+}
+
