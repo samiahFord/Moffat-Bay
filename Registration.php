@@ -18,7 +18,7 @@
           <p>Registration</p>
         </div>
         <div class="card-content">
-          <form action="register.php" method="post">
+          <form action="Register.php" method="post">
           <label>
           First Name:
           </label>
