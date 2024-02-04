@@ -16,6 +16,9 @@
 
     <body>
         <!-- Navigation Bar-->
+        <?php
+        //readfile("shared/navigation.html");
+        ?>
         <nav id="login">
             <a href="#">Login</a>
           </nav>
@@ -28,10 +31,10 @@
             <a href="#">Reservations</a>
             <a href="#">Registration</a>
           </nav>
-    
+
         </div>
-            
-        
+
+
 
         <!-- Video Section -->
         <div class="video-container">
@@ -50,34 +53,34 @@
                 ** The links provided are from third party websites **
             </p>
         </div>
-        
+
 
         <!-- Attractions Section -->
         <div class="attractions">
             <!-- Top cards -->
             <div class="card">
-                
+
                 <div class="card-body">
                     <img src="shared/attrimages/hiking.jpg" class="card-img" alt="Card Image">
                     <h2 class="hiking">Hiking</h2>
                     <p class="card-text"> Explore our beautiful trails with scenic views!</p>
                     <a href="https://www.travelsanjuan.com/explore/hiking" class="btn"> Learn More</a>
                 </div>
-            
 
-            
-                
+
+
+
                 <div class="card-body">
                     <img src="shared/attrimages/whalewatch.jpg" class="card-img" alt="Card Image">
                     <h2 class="whale watching">Whale Watching</h2>
                     <p class="card-text"> Get up close to majestic whales in their natural habitat!</p>
                     <a href="https://www.visitsanjuans.com/whale-watching" class="btn"> Learn More</a>
                 </div>
-           
 
-            
-               
-                <div class="card-body"> 
+
+
+
+                <div class="card-body">
                     <img src="shared/attrimages/scuba.jpg" class="card-img" alt="Card Image">
                     <h2 class="scuba">Scuba Diving</h2>
                     <p class="card-text">Get a closer look at the marine life surrounding San Juan Islands!</p>
@@ -88,28 +91,28 @@
 
             <!-- Bottom Cards -->
             <div class="card2">
-                                
+
                 <div class="card-body2">
                     <img src="shared/attrimages/san-juan-islands-museum.jpeg" class="card-img" alt="Card Image">
                     <h2 class="museums">Museums</h2>
                     <p class="card-text"> Dive into history, art, and more!</p>
                     <a href="https://www.travelsanjuan.com/museums" class="btn"> Learn More</a>
                 </div>
-            
 
-            
-                
+
+
+
                 <div class="card-body2">
                     <img src="shared/attrimages/winetasting.jpg" class="card-img" alt="Card Image">
                     <h2 class="wine tasting">Wine Tasting</h2>
                     <p class="card-text"> Raise a glass and relax with a great view!</p>
                     <a href="https://www.visitsanjuans.com/wineries-breweries-distilleries" class="btn"> Learn More</a>
                 </div>
-           
 
-            
-               
-                <div class="card-body2"> 
+
+
+
+                <div class="card-body2">
                     <img src="shared/attrimages/kayak.png" class="card-img" alt="Card Image">
                     <h2 class="kayaking">Kayaking</h2>
                     <p class="card-text"> The Bay is calling, and you must answer!</p>

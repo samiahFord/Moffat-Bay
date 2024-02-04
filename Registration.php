@@ -49,40 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // User password  do not match, display an error message
       echo "<script>alert('WARNING!!! The passwords you entered did not match WARNING!!! ');</script>";
     }
-    /*
-    // Query to check if the user exists
-    $query = "SELECT * FROM Guests WHERE first_name = '$first_name' OR last_name = '$last_name' OR telephone = '$telephone' AND email = '$email' OR password = '$password'";
-
-    $result = $con->query($query);
-
-    // Check if the query executed successfully
-    if ($result) {
-
-        // Check if the user exists
-        if ($result->num_rows > 0) {
-          // User already exist, display an error message
-          echo "<script>alert('The information you entered already exist');</script>";
-        } else {
-          // Prepare SQL Query to Insert user data into the database
-          $query = "INSERT INTO Guests (first_name,last_name,telephone,email,password) VALUES ('$first_name','$last_name', '$telephone', '$email', '$password')";
-
-          // Display at the top of Register page
-          // that the data was entered correctly.
-          if ($con->query($query)){
-            printf("Record inserted succesfully");
-          }
-          // Display a message at the top of Register page
-          // that the data was NOT entered into the database.
-          if ($con->errno) {
-            printf("Could not insert record into table: %s<br />", $con->error);
-          }
-        }
-    } else {
-        // Query execution failed, display an error message
-        echo "<script>alert('Error: " . $con->error . "');</script>";
-    }*/
+    // Toggle the password to see what is in the field
+    //echo "<div id='togglePaswd'></div>";
 }
 ?>
+
 <!DOCTYPE html>
 <!-- Team 2 : Capstone Project Registration Page -->
 <html lang="en">
@@ -93,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
 </head>
 
-<body>
+<body class="landing-page">
   <?php
   readfile("shared/navigation.html");
   ?>
@@ -133,12 +104,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </label>
           <label>
           <input type="password" id="password" name="password"required>
+          <input type="checkbox" onclick="togglePaswd()">Show Password<br><br>
           </label>
           <label>
           Confirm Password:
           </label>
           <label>
-          <input type="password" id="cpassword" name="cpassword"required><br><br>
+          <input type="password" id="cpassword" name="cpassword"required>
+          <input type="checkbox" onclick="toggleCpaswd()">Show Password<br><br>
           </label>
           <label>
           <input type="submit" value="Register Now!">
@@ -147,5 +120,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
       </div>
     </div>
+    <script type="text/JavaScript">
+    // Change the input type so the user can see the entered password
+    function togglePaswd() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    // Change the input type so the user can see the entered confirmation password
+    function toggleCpaswd() {
+      var y = document.getElementById("cpassword");
+      if (y.type === "password") {
+        y.type = "text";
+      } else {
+        y.type = "password";
+      }
+    }
+    </script>
 </body>
 </html>
