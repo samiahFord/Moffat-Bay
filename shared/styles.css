@@ -6,7 +6,45 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.landing-page{
+ background-color: #cccccc;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-image: url("landing-page.png");
+}
+#left-text{
+  margin: 50px 150px;
+}
+#left-text h1{
+  font-family: "Julius Sans One", sans-serif;
+  align-items: center;
+}
+#left-text p{
+  width: 55%;
+  font-family: sans-serif;
+  justify-content: left;
+  align-items: left;
+}
+#left-text button {
+  background-color: #8a9f9c;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 35%;
+}
+#left-text button:hover {
+  background-color: #6b7d7a;
+}
+#left-text a{
+  text-decoration: none;
+  color: white;
+  font-family: "Julius Sans One", sans-serif;
+}
 #navbar {
   display: flex;
   justify-content: center;
