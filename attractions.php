@@ -17,25 +17,9 @@
     <body>
         <!-- Navigation Bar-->
         <?php
-        //readfile("shared/navigation.html");
+        readfile("shared/navigation.html");
         ?>
-        <nav id="login">
-            <a href="#">Login</a>
-          </nav>
-          <nav id="navbar">
-            <a href="#">About Us</a>
-            <a href="#">Attractions</a>
-            <a href="/index.php"
-              ><img src="shared/transparent-logo.png" alt="Logo image"
-            /></a>
-            <a href="#">Reservations</a>
-            <a href="#">Registration</a>
-          </nav>
-
-        </div>
-
-
-
+        
         <!-- Video Section -->
         <div class="video-container">
             <video src="shared/attrimages/whalewatching.mp4" controls autoplay loop></video>
