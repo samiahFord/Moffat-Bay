@@ -8,7 +8,6 @@
 </head>
 <body>
     <?php
-    // Assuming navigation.html is in the "shared" folder
     readfile("shared/navigation.html");
     ?>
     <header>

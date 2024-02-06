@@ -12,6 +12,7 @@
  background-size: cover;
  background-image: url("landing-page.png");
 }
+
 #left-text{
   margin: 50px 150px;
 }
@@ -272,5 +273,87 @@ input[type="submit"]
     .image-container {
         width: 100%; /* Full width on smaller screens */
         text-align: center;
+    }
+}
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.reservation-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-details p {
+    margin: 10px 0;
+}
+
+.reservation-details p:first-child {
+    font-weight: bold;
+}
+
+.reservation-details a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.reservation-details a:hover {
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
     }
 }
