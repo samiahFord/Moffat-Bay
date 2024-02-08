@@ -5,47 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Summary</title>
     <style>
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
+       /* styles.css */
 
-        h1 {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .summary-table-container {
-            display: inline-block;
-            width: 120%;
-            overflow-x: auto;
-        }
+.container {
+    text-align: center;
+    padding: 20px;
+}
 
-        .summary-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 15px;
-        }
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-        .summary-table th,
-        .summary-table td {
-            border: 1px solid #dddddd;
-            padding: 8px;
-        }
+.summary-table-container {
+    display: inline-block;
+    width: 120%;
+    overflow-x: auto;
+}
 
-        .summary-table th {
-            background-color: #f2f2f2;
-        }
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
 
-        .details-link {
-            color: blue; /* Change the color if needed */
-            text-decoration: none;
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
+.summary-table th,
+.summary-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
 
-        .details-link:hover {
-            color: #666666; /* Change the color on hover if needed */
-        }
+.summary-table th {
+    background-color: #f2f2f2;
+}
+
+.details-link {
+    color: blue; /* Change the color if needed */
+    text-decoration: none;
+    transition: padding 0.3s ease, -webkit-filter 0.3s ease, filter 0.3s ease;
+    padding: 0px 50px;
+}
+
+.details-link:hover {
+    -webkit-filter: drop-shadow(1px 1px 1px #222);
+    filter: drop-shadow(1px 1px 1px #222);
+}
+
     </style>
 </head>
 <body>

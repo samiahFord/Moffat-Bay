@@ -11,7 +11,7 @@
         }
 
         h1 {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 20px;
         }
 
@@ -22,7 +22,7 @@
         .details-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .details-table th,
@@ -33,6 +33,18 @@
 
         .details-table th {
             background-color: #f2f2f2;
+        }
+
+        .details-link {
+            color: blue; /* Change the color if needed */
+            text-decoration: none;
+            transition: padding 0.3s ease, -webkit-filter 0.3s ease, filter 0.3s ease;
+            padding: 0px 50px;
+        }
+
+        .details-link:hover {
+            -webkit-filter: drop-shadow(1px 1px 1px #222);
+            filter: drop-shadow(1px 1px 1px #222);
         }
     </style>
 </head>
@@ -57,10 +69,13 @@
                     // Include database connection
                     include 'config.php';
 
-                    // Check if reservation ID is provided
-                    if (isset($_GET['id'])) {
+                    // Check if reservation ID is provided and is a valid integer
+                    if (isset($_GET['id']) && ctype_digit($_GET['id'])) {
                         $reservation_id = $_GET['id'];
-                        
+
+                        // Convert the ID to an integer for security and consistency
+                        $reservation_id = intval($reservation_id);
+
                         // Query to fetch reservation details based on ID
                         $query = "SELECT r.*, g.first_name, g.last_name, g.telephone, g.email, rm.room_size 
                                   FROM reservations r

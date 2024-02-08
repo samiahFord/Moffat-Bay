@@ -301,7 +301,6 @@ main {
     justify-content: center;
 }
 
-/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -325,31 +324,6 @@ h1 {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.reservation-details {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.reservation-details p {
-    margin: 10px 0;
-}
-
-.reservation-details p:first-child {
-    font-weight: bold;
-}
-
-.reservation-details a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.reservation-details a:hover {
-    color: #666;
 }
 
 @media screen and (max-width: 768px) {
