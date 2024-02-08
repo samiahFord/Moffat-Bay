@@ -11,20 +11,20 @@
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 20px;
         }
 
         .summary-table-container {
             display: inline-block;
-            width: 100%;
+            width: 120%;
             overflow-x: auto;
         }
 
         .summary-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 18px;
+            font-size: 15px;
         }
 
         .summary-table th,
@@ -38,7 +38,7 @@
         }
 
         .details-link {
-            color: #000000; /* Change the color if needed */
+            color: blue; /* Change the color if needed */
             text-decoration: none;
             transition: color 0.3s ease; /* Smooth color transition */
         }
@@ -61,6 +61,7 @@
                         <th>Room ID</th>
                         <th>Check-in Date</th>
                         <th>Check-out Date</th>
+                        <th>Room Size</th> <!-- Added Room Size -->
                         <th>Details</th>
                     </tr>
                 </thead>
@@ -70,9 +71,10 @@
                     include 'config.php';
 
                     // Query to fetch reservation summary
-                    $query = "SELECT r.*, g.first_name, g.last_name 
+                    $query = "SELECT r.*, g.first_name, g.last_name, rm.room_size 
                               FROM reservations r
-                              INNER JOIN guests g ON r.guest_id = g.guest_id";
+                              INNER JOIN guests g ON r.guest_id = g.guest_id
+                              INNER JOIN Rooms rm ON r.room_id = rm.room_id";
                     $result = $con->query($query);
 
                     // Display reservation summary
@@ -84,11 +86,12 @@
                             echo "<td>" . $row['room_id'] . "</td>";
                             echo "<td>" . $row['check_in_date'] . "</td>";
                             echo "<td>" . $row['check_out_date'] . "</td>";
+                            echo "<td>" . $row['room_size'] . "</td>";
                             echo "<td><a href='reservation_details.php?id=" . $row['reservation_id'] . "' class='details-link'>Details</a></td>";
                             echo "</tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='6'>No reservations found.</td></tr>";
+                        echo "<tr><td colspan='7'>No reservations found.</td></tr>";
                     }
 
                     // Close database connection
@@ -100,5 +103,3 @@
     </div>
 </body>
 </html>
-
-

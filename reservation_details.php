@@ -11,20 +11,18 @@
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 20px;
         }
 
         .details-table-container {
-            display: inline-block;
-            width: 100%;
-            overflow-x: auto;
+            overflow-x: auto; /* Enable horizontal scrolling */
         }
 
         .details-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .details-table th,
@@ -51,6 +49,7 @@
                         <th>Room ID</th>
                         <th>Check-in Date</th>
                         <th>Check-out Date</th>
+                        <th>Room Size</th> <!-- Added Room Size -->
                     </tr>
                 </thead>
                 <tbody>
@@ -61,11 +60,12 @@
                     // Check if reservation ID is provided
                     if (isset($_GET['id'])) {
                         $reservation_id = $_GET['id'];
-
+                        
                         // Query to fetch reservation details based on ID
-                        $query = "SELECT r.*, g.first_name, g.last_name, g.telephone, g.email 
+                        $query = "SELECT r.*, g.first_name, g.last_name, g.telephone, g.email, rm.room_size 
                                   FROM reservations r
                                   INNER JOIN guests g ON r.guest_id = g.guest_id
+                                  INNER JOIN Rooms rm ON r.room_id = rm.room_id
                                   WHERE reservation_id = $reservation_id";
                         $result = $con->query($query);
 
@@ -78,6 +78,7 @@
                             echo "<td>" . $row['room_id'] . "</td>";
                             echo "<td>" . $row['check_in_date'] . "</td>";
                             echo "<td>" . $row['check_out_date'] . "</td>";
+                            echo "<td>" . $row['room_size'] . "</td>";
                             echo "</tr>";
                         } else {
                             echo "<tr><td colspan='6'>Reservation not found.</td></tr>";
