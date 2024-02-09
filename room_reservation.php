@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
-    //$roomSize = $_POST['roomSize'];
-    $num_guest = $_POST['num_guest'];
-    $checkin = $_POST['checkin'];
-    $checkout = $_POST['checkout'];
+    $num_of_guests = $_POST['num_of_guests'];
+    $check_in_date = $_POST['check_in_date'];
+    $check_out_date = $_POST['check_out_date'];
+    $room_size = $_POST['room_size'];
 
     // Query to check if the user exists
     $query = "SELECT * FROM Guests WHERE first_name = '$first_name' AND last_name = '$last_name'";
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if the user exists
         if ($result->num_rows > 0) {
           // Prepare SQL Query to Insert user data into the database
-          $query = "INSERT INTO reservation (num_guest,check_in_date,check_out_date) VALUES ('num_guest', '$checkin', '$checkout')";
+          $query = "INSERT INTO Reservations (num_of_guests,check_in_date,check_out_date,room_size) VALUES ('$num_of_guests','$check_in_date','$check_out_date','$room_size')";
 
           // Display at the top of Register page
           // that the data was entered correctly.
@@ -78,11 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>
               <input type="text" id="last_name" name="last_name"required><br>
             </labels>
-            <label for="roomSize">
+            <label for="room_size">
             Room Size:
             </label><br>
             <label>
-              <select name="roomSize" id="roomSize">
+              <select name="room_size" id="rooom_size">
                 <option value="DoubleF">Double Full</option>
                 <option value="Queen">Queen</option>
                 <option value="DoubleQ">Double Queen</option>
@@ -93,9 +93,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Number of Guests:
             </label><br>
             <label>
-                <input type="radio" id="option1" name="num_guest" value="2">
+                <input type="radio" id="option1" name="num_of_guests" value="2">
                 <label for="guest1">1 - 2</label><br>
-                <input type="radio" id="option2" name="num_guest" value="5">
+                <input type="radio" id="option2" name="num_of_guests" value="5">
                 <label for="guest2">3 - 5</label><br>
               </label><br>
             </label>
@@ -103,13 +103,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Check In Date:
             </label><br>
             <label>
-              <input type="date" id="checkin" name="checkin"><br><br>
+              <input type="date" id="check_in_date" name="check_in_date"><br><br>
             </label>
             <label>
               Check Out Date:
             </label><br>
             <label>
-            <input type="date" id="checkout" name="checkout">
+            <input type="date" id="check_out_date" name="check_out_date">
             </label><br><br>
             <label>
             <input type="submit" value="Book Your Stay!">
