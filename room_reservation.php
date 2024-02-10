@@ -11,25 +11,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_in_date = $_POST['check_in_date'];
     $check_out_date = $_POST['check_out_date'];
     $room_size = $_POST['room_size'];
+    $room_id = 2;
 
     // Query to check if the user exists
     $query = "SELECT * FROM Guests WHERE first_name = '$first_name' AND last_name = '$last_name'";
+    //$query .= "SELECT room_id FROM Rooms WHERE room_size = '$room_size'";
 
     $result = $con->query($query);
+    //$result1 = $con->query($room_id);
+    //$result2 = $con->query($guest_id);
+
+    //if (mysqli->multi_query($query)) {
+    //}
+
+    $row = $result->fetch_assoc();
+    $guest_id = $row["guest_id"];
+    //$room_id = $rom["room_id"];
 
     // Check if the query executed successfully
     if ($result) {
         // Check if the user exists
         if ($result->num_rows > 0) {
           // Prepare SQL Query to Insert user data into the database
-          $query = "INSERT INTO Reservations (num_of_guests,check_in_date,check_out_date,room_size) VALUES ('$num_of_guests','$check_in_date','$check_out_date','$room_size')";
+          $query = "INSERT INTO Reservations (room_id,guest_id,num_of_guests,check_in_date,check_out_date,room_size) VALUES ('$room_id','$guest_id','$num_of_guests','$check_in_date','$check_out_date','$room_size')";
 
-          // Display at the top of Register page
+          // Display at the top of room reservation page
           // that the data was entered correctly.
           if ($con->query($query)){
             echo "<script>alert('Record inserted succesfully');</script>";
           }
-          // Display a message at the top of Register page
+          // Display a message at the top of room reservation page
           // that the data was NOT entered into the database.
           if ($con->errno) {
             printf("WARNING!!! Could not insert record into table: %s  WARNING!!! <br />", $con->error);
