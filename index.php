@@ -27,7 +27,7 @@ include 'config.php';
         <p>Our dedicated staff is committed to ensuring your stay is seamless and memorable. Let Moffat Bay Lodge be your
             escape into nature's embrace, where every moment becomes a cherished memory. Welcome to a haven where the Pacific
             Northwest's beauty meets unparalleled hospitality.</p><br>
-        <button><a href="reservation.php">Book Now!</a></button>
+        <button><a href="room_reservation.php">Book Now!</a></button>
     </div>
 </body>
 

@@ -331,3 +331,24 @@ h1 {
         padding: 10px;
     }
 }
+table {
+  font-family: sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+th{
+  text-align: center;
+  padding: 8px;
+  width: 10%;
+}
+td {
+  border: 1px solid #94978b;
+  text-align: left;
+  padding: 8px;
+  width: 10%;
+}
+
+tr:nth-child(odd) {
+  background-color: #969794;
+}
