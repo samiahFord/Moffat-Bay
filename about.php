@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>About Us - Moffat Bay Lodge and Marina</title>
-  <link rel="icon" type="image/x-icon" href="Moffat-Bay/shared/transparent-logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
-    rel="stylesheet"/>
+  <link rel="icon" href="/Moffat-Bay/shared/transparent-logo.png">
   <link href="shared/aboutUs.css" rel="stylesheet">
 </head>
 
@@ -59,19 +55,28 @@
     </div>
 
 
-  <!-- Location Map -->
+    <!-- Location Map -->
     <section id="location">
         <h2>Location</h2>
-        <img src="map.png" alt="map" style="height: 600px; width: 800px;">
+        <img src="/Moffat-Bay/shared/attrimages/map.png" alt="map" style="height: 600px; width: 800px;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2638.9196617269836!2d-122.97179092661662!3d48.59223709415396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1707408901777!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Joviedsa Island, nestled next to Broken Point</iframe>
     </section>
+
+    <div class="reelEmIn">
+        <h3>
+            Book now and experience the tranquility, luxury, and relaxation that only Moffat Bay Lodge can offer!
+        </h3>
+    </div>
+
+    <!-- Book Now Button -->
+    <button class="bookNow" type="button"><a href="room_reservation.php">Book Now!</a></button>
 
     <!-- Contact Us -->
     <div class="contactbg">
 
             <div class="contactform" id="contactform">
                 <h2>Contact Us</h2>
-                <form action="#">
+                <form action="contactForm.php" method="post" id="contactForm">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -86,7 +91,9 @@
             </div>
 
             <div class="ourinfo">
-                <h3>You may also reach us at <a href="mailto:info@moffatbaylodge.com">info@moffatbaylodge.com</a> or by phone at (555) 555-5555.</h3>
+                <h3>You may also reach us at: <a href="mailto:info@moffatbaylodge.com">info@moffatbaylodge.com</a> <br> or by phone at (555) 555-5555.</h3>
             </div>
     </div>
+
+    
 </body>
