@@ -2,7 +2,7 @@
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_USER', 'moffatBay');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'moffatBayLodge!');
 define('DB_NAME', 'moffatBayLodge');
 
 // Create connection
