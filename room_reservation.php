@@ -115,6 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="date" id="check_out_date" name="check_out_date">
             </label><br><br>
             <label>
+            <input type="submit" value="Alredy Reserved? Look Up Reservation" onclick="window.location.href='reservation_lookup.php'"><br><br>
             <input type="submit" value="Book Your Stay!">
             </label>
           </form>
