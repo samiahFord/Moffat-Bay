@@ -20,6 +20,7 @@
         <p>
             Nestled on the picturesque Joviedsa Island, part of the stunning San Juan Islands, Moffat Bay Lodge and Marina is a hidden gem that exudes beauty straight out of a magazine. Surrounded by crystal-clear waters and lush green forests, this tranquil oasis offers a retreat like no other.
         </p>
+        <br/>
         <p>
             The heart of Moffat Bay Lodge lies in its dedicated and friendly staff, who strive to make every guest's stay unforgettable. From the moment you arrive, you'll be greeted with warm smiles and impeccable service, ensuring that your every need is met with care and attention.
         </p> 
@@ -69,7 +70,9 @@
     </div>
 
     <!-- Book Now Button -->
-    <button class="bookNow" type="button"><a href="room_reservation.php">Book Now!</a></button>
+    <button class="bookNow" type="button">
+        <a href="room_reservation.php">Book Now!</a>
+    </button>
 
     <!-- Contact Us -->
     <div class="contactbg">
@@ -92,6 +95,12 @@
 
             <div class="ourinfo">
                 <h3>You may also reach us at: <a href="mailto:info@moffatbaylodge.com">info@moffatbaylodge.com</a> <br> or by phone at (555) 555-5555.</h3>
+                <br>
+                <p>
+                    460 Moffat Bay Dr <br>
+                    Joviedsa Island, <br>
+                    San Juan County, WA 98260
+                </p>
             </div>
     </div>
 

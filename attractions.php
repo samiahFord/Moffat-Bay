@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Moffat Bay Lodge Website</title>
-        <link rel="icon" type="image/x-icon" href="Moffat-Bay/shared/transparent-logo.png">
+        <link rel="icon" type="image/x-icon" href="/Moffat-Bay/shared/transparent-logo.png">
         <link rel="stylesheet" href="shared/attractions.css">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,8 +32,9 @@
         <div class="attractionsp">
             <p>
                 To explore all the attractions available around Moffat Bay Lodge, click on Learn More.
+                <br/>
                 This will take you to the pertinent information to get your adventure started!
-                <br>
+                <br/>
                 ** The links provided are from third party websites **
             </p>
         </div>
