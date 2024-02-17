@@ -37,6 +37,7 @@ CREATE VIEW ReservationInfo AS
 SELECT
 	g.first_name,
 	g.last_name,
+   g.email,
 	rm.room_type,
 	rs.check_in_date,
 	rs.check_out_date,
