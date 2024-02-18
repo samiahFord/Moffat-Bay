@@ -2,8 +2,10 @@ DROP DATABASE IF EXISTS moffatBayLodge;
 CREATE DATABASE IF NOT EXISTS moffatBayLodge;
 use moffatBayLodge;
 
+DROP USER IF EXISTS 'moffatBay'@'localhost';
+flush privileges;
 CREATE USER 'moffatBay'@'localhost' IDENTIFIED BY 'moffatBayLodge!';
-GRANT ALL PRIVILEGES ON moffatBayLodge.* TO moffatBay;
+GRANT ALL PRIVILEGES ON moffatBayLodge.* TO 'moffatBay'@'localhost';
 
 CREATE TABLE Guests (
    guest_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -15,13 +17,13 @@ CREATE TABLE Guests (
    registration_date DATETIME NOT NULL default now(),
    last_login_date DATE
 );
- 
+
 CREATE TABLE Rooms (
    room_id INT AUTO_INCREMENT PRIMARY KEY,
    room_type VARCHAR(255) NOT NULL,
    capacity INT NOT NULL
 );
- 
+
 CREATE TABLE Reservations (
    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
    guest_id INT,
@@ -48,7 +50,7 @@ SELECT
     WHEN rs.num_of_guests > 2 THEN DATEDIFF(rs.check_out_date, rs.check_in_date) * 157.5
 	END AS stay_total,
 	rs.reservation_id
-FROM Reservations rs 
+FROM Reservations rs
 JOIN Guests g on g.guest_id = rs.guest_id
 JOIN Rooms rm on rm.room_id = rs.room_id;
 
@@ -72,7 +74,7 @@ VALUES ('Casper', 'Nolan', '683-478-4312', 'Casper.Nolan@gmail.com', 'Nolan4312!
 INSERT INTO Guests (first_name, last_name, telephone, email, password)
 VALUES ('Felix', 'Irwin', '627-980-1856', 'f.Irwin@gmail.com', 'Irwin1856!');
 
--- ROOMS -- 
+-- ROOMS --
 INSERT INTO Rooms(room_type,capacity)
 Values('Double Full',5);
 INSERT INTO Rooms(room_type,capacity)
@@ -82,7 +84,7 @@ Values('Double Queen', 5);
 INSERT INTO Rooms(room_type, capacity)
 Values('King',2);
 
--- RESERVATIONS -- 
+-- RESERVATIONS --
 INSERT INTO Reservations (guest_id, room_id, num_of_guests, check_in_date, check_out_date)
 VALUES (1, 1, 5, '2024-01-01', '2024-01-03');
 INSERT INTO Reservations (guest_id, room_id, num_of_guests, check_in_date, check_out_date)
@@ -103,7 +105,3 @@ INSERT INTO Reservations (guest_id, room_id, num_of_guests, check_in_date, check
 VALUES (4, 2, 2, '2024-03-14', '2024-03-17');
 INSERT INTO Reservations (guest_id, room_id, num_of_guests, check_in_date, check_out_date)
 VALUES (4, 3, 4, '2024-04-01', '2024-04-05');
-
-
-
-
