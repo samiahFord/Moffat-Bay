@@ -6,13 +6,13 @@
   <title>Moffat Bay Lodge</title>
   <style>
     hr {
+    background-color: gray;
     border:none;
     height: 20px;
  	width: 100%;
 	height: 50px;
 	margin-top: 20px;
 	border-bottom: 1px solid #1f1209;
-	box-shadow: 0 20px 20px -20px #333;
     margin: 0px auto 10px; 
     }
 
@@ -77,11 +77,6 @@
         <div class="container">
             <div class="row">
             <div class="col-md-4">
-                <h4>Moffat Bay Lodge</h4>
-                <p>&copy; <?php echo date("Y"); ?>  2024 Moffat Bay Lodge. All rights reserved. </p>
-            </div>
-            <br/><br/>
-            <div class="col-md-4">
                 <h4>Navigate</h4>
                 <ul>
                 <li><a href="/Moffat-Bay/index.php">Home</a></li>
@@ -101,6 +96,12 @@
                 <li><a href="https://twitter.com/search?q=moffat%20bay&src=typed_query&f=top"><img src="/Moffat-Bay/shared/Twt.png" alt="TwitterXLogo"></i></a></li>
                 <li><a href="https://www.instagram.com/"><img src="/Moffat-Bay/shared/insta.png" alt="InstagramLogo"></a></li>
                 </ul>
+            </div>
+
+            <br/><br/>
+            <div class="col-md-4">
+                <h4>Moffat Bay Lodge</h4>
+                <p>&copy; <?php echo date("Y"); ?>  2024 Moffat Bay Lodge. All rights reserved. </p>
             </div>
             </div>
         </div>

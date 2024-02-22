@@ -169,8 +169,9 @@ iframe {
   font-family: "Julius Sans One", sans-serif;
   font-size: 18px;
   text-decoration: none;
-  background-color: #F3F4F2;
-  color: #8a9f9c;
+  background-color: #8a9f9c;
+  color: #F3F4F2;
+  box-shadow: 2px 2px 4px #545551;
   margin: 70px auto;
   width: 250px;
   cursor: pointer;
@@ -184,8 +185,13 @@ iframe {
   
 .bookNow:active {
   box-shadow:
-    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(255, 255, 255, 0.409),
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.bookNow a {
+  text-decoration: none;
+  color: #8a9f9c;
 }
   /* Contact Us */
 .contactbg {
