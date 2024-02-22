@@ -104,5 +104,6 @@
             </div>
     </div>
 
-    
+    <!-- Footer -->
+    <?php readfile("shared/footer.php"); ?>
 </body>

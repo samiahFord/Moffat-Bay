@@ -26,7 +26,7 @@
         </div>
 
         <div class="attractionsH">
-            <h1>Attractions</h1>
+            <h1>ATTRACTIONS</h1>
         </div>
 
         <div class="attractionsp">
@@ -105,4 +105,8 @@
                 </div>
             </div>
         </div>
+
+    <!-- Footer -->
+    <?php readfile("shared/footer.php"); ?>
     </body>
+</html>

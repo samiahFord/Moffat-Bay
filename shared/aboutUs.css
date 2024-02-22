@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #232c26;
-    color: white;
+    background-color: #fff;
+    color: #232c26;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0;
     margin: 0;
@@ -19,6 +19,7 @@ body {
   text-align: center;
  }
 .our-story h1 {
+  color: gray;
   margin-top: 30px;
   font-size: 40px;
   font-family: "Julius Sans One", sans-serif;
@@ -131,6 +132,10 @@ body {
   margin-bottom: 50px;
   height: auto;
   max-width: 100%;
+}
+
+#location h2 {
+  font-family: "Julius Sans One", "Helvetica", sans-serif;
 }
 
 iframe {
