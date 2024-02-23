@@ -15,7 +15,7 @@
 
     <!-- Opening Text -->
     <div class="our-story">
-        <h1> OUR STORY </h1>
+        <h1> ABOUT US </h1>
         <span class="line"></span>
         <p>
             Nestled on the picturesque Joviedsa Island, part of the stunning San Juan Islands, Moffat Bay Lodge and Marina is a hidden gem that exudes beauty straight out of a magazine. Surrounded by crystal-clear waters and lush green forests, this tranquil oasis offers a retreat like no other.
@@ -38,9 +38,7 @@
         </div>
         <div class="secondpic">           
             <p>
-                Relax and unwind in our indoor heated pool, where you can soak in the tranquil surroundings and let the stress melt away. Take a moment for yourself in our luxurious spa, where rejuvenating treatments will leave you feeling pampered and refreshed.
-                <br />
-                Venture out into the natural wonders that surround Moffat Bay Lodge, with activities such as whale watching, hiking through pristine forests, scuba diving in vibrant reefs, and kayaking along calm waters. Explore the beauty of the San Juan Islands at your own pace, and let the serenity of the surroundings envelop you.
+                Relax and unwind in our indoor heated pool, where you can soak in the tranquil surroundings and let the stress melt away. 
             </p>
 
             <img src="shared/attrimages/indoor heated pool.jpg" alt="Moffat Bay Lodge and Marina">
@@ -51,6 +49,30 @@
                 Explore our spacious rooms featuring double full beds, queen beds, double queen beds, and king beds, providing options for every type of traveler. Whether you are traveling solo, as a couple, or with a group of friends or family, our rooms can accommodate 1 to 5 guests comfortably.
             </p>
             <img src="shared/attrimages/sasha-kaunas-67-sOi7mVIk-unsplash.jpg" alt="Moffat Bay Lodge and Marina">
+            
+        </div>
+
+        <div class="fourthpic">
+            <p>
+            Indulge in the ultimate relaxation experience at Moffat Bay Lodge and Marina's luxurious spa. Our spa offers a serene escape for guests seeking rejuvenation and tranquility. Treat yourself to a pampering massage, a revitalizing facial, or a soothing body treatment, all performed by our skilled and experienced therapists.
+            </p>
+            <img src="shared/attrimages/spa.jpg" alt="Moffat Bay Lodge and Marina">
+            
+        </div>
+
+        <div class="fifthpic">
+            <p>
+            At Moffat Bay Lodge and Marina, families are always welcome, and our playground and children's activities are sure to keep the little ones entertained for hours on end. Let your kids explore the playground, complete with slides, swings, and climbing frames, or take part in our organized activities such as arts and crafts, scavenger hunts, or nature walks. 
+            </p>
+            <img src="shared/attrimages/playground.jpg" alt="Moffat Bay Lodge and Marina">
+            
+        </div>
+
+        <div class="sixthpic">
+            <p>
+            For those who love the water, Moffat Bay Lodge and Marina's marina facilities offer everything you need for a seamless and enjoyable boating experience. Refuel your boat at our convenient fuel docks, or have it washed and repaired by our expert technicians. Stock up on all your marine and boat chandlers at our on-site stores, where you'll find everything from fishing gear to boat accessories.
+            </p>
+            <img src="shared/attrimages/marina1.jpg" alt="Moffat Bay Lodge and Marina">
             
         </div>
     </div>
