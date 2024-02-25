@@ -124,5 +124,8 @@ $con->close();
         </div>
       </div>
     </div>
+
 </body>
+<!-- Footer -->
+<?php readfile("shared/footer2.php"); ?>
 </html>
