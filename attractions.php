@@ -27,16 +27,17 @@
 
         <div class="attractionsH">
             <h1>ATTRACTIONS</h1>
+            <span class="line"></span>
         </div>
 
         <div class="attractionsp">
-            <p>
-                To explore all the attractions available around Moffat Bay Lodge, click on Learn More.
+            <h3>
+                Discover the thrills around Joviedsa Island, part of the San Juan Islands, and home to Moffat Bay Lodge and Marina.
                 <br/>
-                This will take you to the pertinent information to get your adventure started!
+                Click on 'Learn More' under each activity to learn about every unique offering.
                 <br/>
-                ** The links provided are from third party websites **
-            </p>
+                Each link is a resource to the corresponding activity officially sponsored by the San Juan islands Visitors Bureau, and All San Juan Islands Washington Vacations.
+            </h3>
         </div>
 
 
@@ -48,8 +49,8 @@
                 <div class="card-body">
                     <img src="shared/attrimages/hiking.jpg" class="card-img" alt="Card Image">
                     <h2 class="hiking">Hiking</h2>
-                    <p class="card-text"> Explore our beautiful trails with scenic views!</p>
-                    <a href="https://www.travelsanjuan.com/explore/hiking" class="btn"> Learn More</a>
+                    <p class="card-text"> Explore Our Beautiful Trails with Scenic Views!</p>
+                    <a href="https://www.visitsanjuans.com/itineraries/best-hikes-in-the-san-juan-islands" target="_blank" class="btn"> Learn More</a>
                 </div>
 
 
@@ -58,8 +59,8 @@
                 <div class="card-body">
                     <img src="shared/attrimages/whalewatch.jpg" class="card-img" alt="Card Image">
                     <h2 class="whale watching">Whale Watching</h2>
-                    <p class="card-text"> Get up close to majestic whales in their natural habitat!</p>
-                    <a href="https://www.visitsanjuans.com/whale-watching" class="btn"> Learn More</a>
+                    <p class="card-text"> Get Up Close to Majestic Whales in Their Natural Habitat!</p>
+                    <a href="https://www.visitsanjuans.com/whale-watching" target= "_blank" class="btn"> Learn More</a>
                 </div>
 
 
@@ -68,8 +69,8 @@
                 <div class="card-body">
                     <img src="shared/attrimages/scuba.jpg" class="card-img" alt="Card Image">
                     <h2 class="scuba">Scuba Diving</h2>
-                    <p class="card-text">Get a closer look at the marine life surrounding San Juan Islands!</p>
-                    <a href="https://www.go-washington.com/San-Juan-Islands/Scuba-Diving-Snorkeling/#" class="btn"> Learn More</a>
+                    <p class="card-text">Get a Closer Look at the Marine Life Surrounding San Juan Islands!</p>
+                    <a href="https://www.allsanjuanislands.com/summer_recreation/diving.php" target="_blank" class="btn"> Learn More</a>
                 </div>
             </div>
 
@@ -79,9 +80,9 @@
 
                 <div class="card-body2">
                     <img src="shared/attrimages/san-juan-islands-museum.jpeg" class="card-img" alt="Card Image">
-                    <h2 class="museums">Museums</h2>
-                    <p class="card-text"> Dive into history, art, and more!</p>
-                    <a href="https://www.travelsanjuan.com/museums" class="btn"> Learn More</a>
+                    <h2 class="museums">Arts & History</h2>
+                    <p class="card-text"> Dive Into the Rich Culture of the San Juan Islands</p>
+                    <a href="https://www.visitsanjuans.com/the-arts" target="_blank" class="btn"> Learn More</a>
                 </div>
 
 
@@ -90,8 +91,8 @@
                 <div class="card-body2">
                     <img src="shared/attrimages/winetasting.jpg" class="card-img" alt="Card Image">
                     <h2 class="wine tasting">Wine Tasting</h2>
-                    <p class="card-text"> Raise a glass and relax with a great view!</p>
-                    <a href="https://www.visitsanjuans.com/wineries-breweries-distilleries" class="btn"> Learn More</a>
+                    <p class="card-text"> Raise a Glass and Relax with a Great View!</p>
+                    <a href="https://www.visitsanjuans.com/wineries-breweries-distilleries" target="_blank" class="btn"> Learn More</a>
                 </div>
 
 
@@ -100,13 +101,19 @@
                 <div class="card-body2">
                     <img src="shared/attrimages/kayak.png" class="card-img" alt="Card Image">
                     <h2 class="kayaking">Kayaking</h2>
-                    <p class="card-text"> The Bay is calling, and you must answer!</p>
-                    <a href="https://www.visitsanjuans.com/kayaking" class="btn"> Learn More</a>
+                    <p class="card-text"> The Bay is Calling, and You Must Answer!</p>
+                    <a href="https://www.visitsanjuans.com/kayaking" target="_blank" class="btn"> Learn More</a>
                 </div>
             </div>
         </div>
 
-    <!-- Footer -->
+        <!-- More info -->
+        <div class="moreInfo">
+            <h3 >Experience new and thrilling adventures daily, from seaplane tours and vibrant farmer's markets to intriguing haunted venues, promising endless excitement around every <a href="https://www.visitsanjuans.com/experiences" target="_blank">corner!</a></h3>
+            <br><br>            
+            <h4> For transportation options and availability please visit: <a href="https://www.visitsanjuans.com/island-transportation" target="_blank"> San Juan Islands: Getting Around </a></h4>
+        </div> 
+   <!-- Footer -->
     <?php readfile("shared/footer.php"); ?>
     </body>
 </html>

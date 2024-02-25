@@ -200,6 +200,7 @@ iframe {
 
   /* Book now */
 .reelEmIn h3 {
+  color: gray;
   left: 0;
   line-height: 1.5;
   font-family: "Julius Sans One", sans-serif;
