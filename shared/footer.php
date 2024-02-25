@@ -76,7 +76,7 @@
         <footer>
         <div class="container">
             <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h4>Navigate</h4>
                 <ul>
                 <li><a href="/Moffat-Bay/index.php">Home</a></li>

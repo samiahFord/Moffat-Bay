@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>About Us - Moffat Bay Lodge and Marina</title>
-  <link rel="icon" href="/Moffat-Bay/shared/transparent-logo.png">
+  <link rel="icon" type="image/x-icon" href="/Moffat-Bay/shared/transparent-logo.png">
   <link href="shared/aboutUs.css" rel="stylesheet">
 </head>
 
@@ -31,7 +31,7 @@
 
         <div class="firstpic">
         <p>
-            Indulge in a culinary journey at our exquisite dining experiences, where locally sourced ingredients and expertly crafted dishes come together to create a symphony of flavors. Whether you're savoring a meal in our elegant restaurant or enjoying a casual bite by the marina, every bite is a feast for the senses.
+            Embark in a culinary journey at our exquisite dining experiences, where locally sourced ingredients and expertly crafted dishes come together to create a symphony of flavors. Whether you're savoring a meal in our elegant restaurant or enjoying a casual bite by the marina, every bite is a feast for the senses.
         </p>
             <img src="shared/attrimages/fullchef.jpg" alt="Moffat Bay Lodge and Marina">
 

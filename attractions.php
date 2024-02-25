@@ -36,7 +36,7 @@
                 <br/>
                 Click on 'Learn More' under each activity to learn about every unique offering.
                 <br/>
-                Each link is a resource to the corresponding activity officially sponsored by the San Juan islands Visitors Bureau, and All San Juan Islands Washington Vacations.
+                Each link is a resource to the corresponding activity officially sponsored by the San Juan Islands Visitors Bureau, and All San Juan Islands Washington Vacations.
             </h3>
         </div>
 
@@ -109,9 +109,9 @@
 
         <!-- More info -->
         <div class="moreInfo">
-            <h3 >Experience new and thrilling adventures daily, from seaplane tours and vibrant farmer's markets to intriguing haunted venues, promising endless excitement around every <a href="https://www.visitsanjuans.com/experiences" target="_blank">corner!</a></h3>
+            <h3 >Experience new and thrilling adventures daily, from seaplane tours and vibrant farmer's markets, to intriguing haunted venues. Promising endless excitement around every <a href="https://www.visitsanjuans.com/experiences" target="_blank">corner!</a></h3>
             <br><br>            
-            <h4> For transportation options and availability please visit: <a href="https://www.visitsanjuans.com/island-transportation" target="_blank"> San Juan Islands: Getting Around </a></h4>
+            <h4> For transportation options and availability, please visit: <a href="https://www.visitsanjuans.com/island-transportation" target="_blank"> San Juan Islands: Getting Around </a></h4>
         </div> 
    <!-- Footer -->
     <?php readfile("shared/footer.php"); ?>
