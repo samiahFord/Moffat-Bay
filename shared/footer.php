@@ -41,7 +41,7 @@
 
     footer ul li {
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 25%;
     }
 
     footer ul li a {
@@ -51,15 +51,18 @@
 
     footer ul li a:hover {
         color: #ccc;
+        transition: all 0.5s ease;
     }
 
     .social-icons li {
         display: inline-block;
-        margin-right: 10px;
+        width: 0;
+        margin-right: 50%;
+        margin-left: 47%;
     }
 
     .social-icons li:last-child {
-        margin-right: 0;
+        margin-right: 50%;
     }
 
     .social-icons img {
