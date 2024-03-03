@@ -49,8 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // User password  do not match, display an error message
       echo "<script>alert('WARNING!!! The passwords you entered did not match WARNING!!! ');</script>";
     }
-    // Toggle the password to see what is in the field
-    //echo "<div id='togglePaswd'></div>";
 }
 ?>
 
@@ -58,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- Team 2 : Capstone Project Registration Page -->
 <html lang="en">
 <head>
-  <title>CSD 340 Web Development with HTML and CSS</title> <link href="shared/style.css"
+  <title>CSD 460 Capstone</title> <link href="shared/style.css"
   type="text/css"
   rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet'>
@@ -86,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </label>
           <label>
           <input type="text" id="last_name" name="last_name"required><br>
-          </labels>
+          </label>
           <label>
           Telephone:
           </label>
@@ -141,5 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
     }
     </script>
+    <!-- Footer -->
+    <?php readfile("shared/footer2.php"); ?>
 </body>
 </html>
