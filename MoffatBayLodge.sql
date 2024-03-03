@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS moffatBayLodge;
 CREATE DATABASE IF NOT EXISTS moffatBayLodge;
-use moffatBayLodge;
+USE moffatBayLodge;
 
 CREATE USER 'moffatBay'@'localhost' IDENTIFIED BY 'moffatBayLodge!';
 GRANT ALL PRIVILEGES ON moffatBayLodge.* TO moffatBay;
@@ -12,16 +12,35 @@ CREATE TABLE Guests (
    telephone VARCHAR(20) NOT NULL,
    email VARCHAR(255) NOT NULL,
    password VARCHAR(255) NOT NULL,
-   registration_date DATETIME NOT NULL default now(),
+   registration_date DATETIME NOT NULL DEFAULT NOW(),
    last_login_date DATE
 );
  
 CREATE TABLE Rooms (
    room_id INT AUTO_INCREMENT PRIMARY KEY,
    room_type VARCHAR(255) NOT NULL,
-   capacity INT NOT NULL
+   capacity INT NOT NULL,
+   room_size VARCHAR(255) NOT NULL
 );
  
+CREATE TABLE Reservations (
+   reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+   guest_id INT,
+   room_id INT,
+   num_of_guests INT,
+   check_in_date DATE NOT NULL,
+   check_out_date DATE NOT NULL,
+   room_size VARCHAR(255) NOT NULL,
+   FOREIGN KEY (guest_id) REFERENCES Guests(guest_id),
+   FOREIGN KEY (room_id) REFERENCES Rooms(room_id)
+);
+
+-- UPDATE ROOMS --
+UPDATE Rooms SET room_size = 'Double Full' WHERE room_type = 'Double Full';
+UPDATE Rooms SET room_size = 'Queen' WHERE room_type = 'Queen';
+UPDATE Rooms SET room_size = 'Double Queen' WHERE room_type = 'Double Queen';
+UPDATE Rooms SET room_size = 'King' WHERE room_type = 'King';
+
 CREATE TABLE Reservations (
    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
    guest_id INT,
@@ -35,22 +54,24 @@ CREATE TABLE Reservations (
 );
 CREATE VIEW ReservationInfo AS
 SELECT
-	g.first_name,
-	g.last_name,
-	rm.room_type,
-	rs.check_in_date,
-	rs.check_out_date,
+    g.first_name,
+    g.last_name,
+    g.email,
+    rm.room_type,
+    rs.check_in_date,
+    rs.check_out_date,
     rs.num_of_guests,
-	DATEDIFF(rs.check_out_date, rs.check_in_date) AS nights_booked,
+    DATEDIFF(rs.check_out_date, rs.check_in_date) AS nights_booked,
     CASE
-    WHEN rs.num_of_guests <= 2 THEN DATEDIFF(rs.check_out_date, rs.check_in_date) * 120.75
-    WHEN rs.num_of_guests > 2 THEN DATEDIFF(rs.check_out_date, rs.check_in_date) * 157.5
-	END AS stay_total,
-	rs.reservation_id
-FROM Reservations rs 
-JOIN Guests g on g.guest_id = rs.guest_id
-JOIN Rooms rm on rm.room_id = rs.room_id;
+        WHEN rs.num_of_guests <= 2 THEN DATEDIFF(rs.check_out_date, rs.check_in_date) * 120.75
+        WHEN rs.num_of_guests > 2 THEN DATEDIFF(rs.check_out_date, rs.check_in_date) * 157.5
+    END AS stay_total,
+    rs.reservation_id
+FROM Reservations rs
+JOIN Guests g ON g.guest_id = rs.guest_id
+JOIN Rooms rm ON rm.room_id = rs.room_id;
 
+ 
 -- INSERTING DATA INTO THE TABLES --
 
 -- GUESTS--

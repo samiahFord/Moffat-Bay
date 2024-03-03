@@ -1,4 +1,6 @@
 <?php
+$searched = false; // Initialize the variable
+
 // Include the database configuration file to establish the connection
 include 'config.php';
 

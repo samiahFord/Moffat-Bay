@@ -25,21 +25,24 @@ h1 {
 }
 
 .summary-table-container {
-    display: inline-block;
-    width: 120%;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    width: 115%; /* Adjusted width to fit the entire screen */
     overflow-x: auto;
 }
 
 .summary-table {
-    width: 100%;
+    width: 110%;
     border-collapse: collapse;
-    font-size: 15px;
+    font-size: 12px;
+   
 }
 
 .summary-table th,
 .summary-table td {
     border: 1px solid #dddddd;
-    padding: 8px;
+    padding: 12px;
+    width: calc(100% / 7); 
 }
 
 .summary-table th {
@@ -50,12 +53,32 @@ h1 {
     color: blue; /* Change the color if needed */
     text-decoration: none;
     transition: padding 0.3s ease, -webkit-filter 0.3s ease, filter 0.3s ease;
-    padding: 0px 50px;
+    padding: 0px 20px;
 }
 
 .details-link:hover {
     -webkit-filter: drop-shadow(1px 1px 1px #222);
     filter: drop-shadow(1px 1px 1px #222);
+}
+
+.confirmation-button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
     </style>
@@ -75,6 +98,7 @@ h1 {
                         <th>Check-out Date</th>
                         <th>Room Size</th> <!-- Added Room Size -->
                         <th>Details</th>
+                        <th>Action</th> <!-- Added Action Column -->
                     </tr>
                 </thead>
                 <tbody>
@@ -100,10 +124,12 @@ h1 {
                             echo "<td>" . $row['check_out_date'] . "</td>";
                             echo "<td>" . $row['room_size'] . "</td>";
                             echo "<td><a href='reservation_details.php?id=" . $row['reservation_id'] . "' class='details-link'>Details</a></td>";
+                            echo "<td><button class='confirmation-button' onclick='confirmReservation(" . $row['reservation_id'] . ")'>Confirm</button>";
+                            echo "<button class='cancel-button' onclick='cancelReservation(" . $row['reservation_id'] . ")'>Cancel</button></td>";
                             echo "</tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='7'>No reservations found.</td></tr>";
+                        echo "<tr><td colspan='8'>No reservations found.</td></tr>";
                     }
 
                     // Close database connection
@@ -113,5 +139,17 @@ h1 {
             </table>
         </div>
     </div>
+
+    <script>
+        function confirmReservation(reservationId) {
+            // Here you can implement logic to submit the reservation to the database
+            alert("Reservation with ID " + reservationId + " confirmed!");
+        }
+
+        function cancelReservation(reservationId) {
+            // Here you can implement logic to cancel the reservation
+            alert("Reservation with ID " + reservationId + " canceled!");
+        }
+    </script>
 </body>
 </html>
