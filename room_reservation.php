@@ -30,7 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           // Display at the top of room reservation page
           // that the data was entered correctly.
           if ($con->query($query)){
-            echo "<script>alert('Record inserted succesfully');</script>";
+            //echo "<script>alert('Record inserted succesfully'); window.location = 'reservation_lookup.php';</script>";
+            //Querying the view for the reservation information
+            $query = "SELECT * FROM reservationinfo WHERE first_name = '$first_name' AND last_name = '$last_name'";
+
+            $result = $con->query($query);
+            $searched = true;
+
           }
           // Display a message at the top of room reservation page
           // that the data was NOT entered into the database.
@@ -121,6 +127,45 @@ $con->close();
             <input type="submit" value="Book Your Stay!">
             </label>
           </form>
+        </div>
+        <div class="card-content-bottom">
+            <?php
+            if ($searched == true) {
+                //Displaying the results
+                if ($result->num_rows > 0) {
+                    echo "<br><br><table>
+                <th>Reservation ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Room Type</th>
+                <th>Check In Date</th>
+                <th>Check Out Date</th>
+                <th>Number of Guests</th>
+                <th>Nights Booked</th>
+                <th>Stay Total</th>
+                </tr>";
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row['reservation_id'] . "</td>";
+                        echo "<td>" . $row['first_name'] . "</td>";
+                        echo "<td>" . $row['last_name'] . "</td>";
+                        echo "<td>" . $row['email'] . "</td>";
+                        echo "<td>" . $row['room_type'] . "</td>";
+                        echo "<td>" . $row['check_in_date'] . "</td>";
+                        echo "<td>" . $row['check_out_date'] . "</td>";
+                        echo "<td>" . $row['num_of_guests'] . "</td>";
+                        echo "<td>" . $row['nights_booked'] . "</td>";
+                        echo "<td>" . $row['stay_total'] . "</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    echo "<script>alert('No Reservations were found using that Email Address or Reservation ID');</script>";
+                }
+            }
+            ?>
         </div>
       </div>
     </div>
