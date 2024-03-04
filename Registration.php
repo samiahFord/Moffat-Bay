@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($password == $cpassword) {
       // Query to check if the user exists
-      $query = "SELECT * FROM Guests WHERE first_name = '$first_name' OR last_name = '$last_name' OR telephone = '$telephone' AND email = '$email' OR password = '$password'";
+      $query = "SELECT * FROM Guests WHERE first_name = '$first_name' AND last_name = '$last_name' OR telephone = '$telephone' AND email = '$email' OR password = '$password'";
 
       $result = $con->query($query);
 
