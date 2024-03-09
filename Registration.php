@@ -32,7 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Display at the top of Register page
             // that the data was entered correctly.
             if ($con->query($query)){
-              echo "<script>alert('You have successfully created an account with Moffat Bay Lodge');</script>";
+              //echo "<script>alert('You have successfully created an account with Moffat Bay Lodge');</script>";
+              header("Location: registration_confirm.php");
             }
             // Display a message at the top of Register page
             // that the data was NOT entered into the database.
