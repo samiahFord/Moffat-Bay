@@ -30,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           // Display at the top of room reservation page
           // that the data was entered correctly.
           if ($con->query($query)){
-            //echo "<script>alert('Record inserted succesfully'); window.location = 'reservation_lookup.php';</script>";
             //Querying the view for the reservation information
             $query = "SELECT * FROM reservationinfo WHERE first_name = '$first_name' AND last_name = '$last_name'";
 
@@ -104,10 +103,16 @@ $con->close();
             Number of Guests:
             </label><br>
             <label>
-                <input type="radio" id="option1" name="num_of_guests" value="2">
-                <label for="guest1">1 - 2</label><br>
-                <input type="radio" id="option2" name="num_of_guests" value="5">
-                <label for="guest2">3 - 5</label><br>
+                <input type="radio" id="option1" name="num_of_guests" value="1">
+                <label for="guest1">1</label><br>
+                <input type="radio" id="option2" name="num_of_guests" value="2">
+                <label for="guest2">2</label><br>
+                <input type="radio" id="option3" name="num_of_guests" value="3">
+                <label for="guest3">3</label><br>
+                <input type="radio" id="option4" name="num_of_guests" value="4">
+                <label for="guest4">4</label><br>
+                <input type="radio" id="option5" name="num_of_guests" value="5">
+                <label for="guest5">5</label><br>
               </label><br>
             </label>
             <label>

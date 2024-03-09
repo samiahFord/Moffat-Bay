@@ -32,8 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Display at the top of Register page
             // that the data was entered correctly.
             if ($con->query($query)){
-              //printf("Record inserted succesfully");
-              echo "<script>alert('Record inserted succesfully');</script>";
+              echo "<script>alert('You have successfully created an account with Moffat Bay Lodge');</script>";
             }
             // Display a message at the top of Register page
             // that the data was NOT entered into the database.
@@ -102,14 +101,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </label>
           <label>
           <input type="password" id="password" name="password"required>
-          <input type="checkbox" onclick="togglePaswd()">Show Password<br><br>
           </label>
           <label>
           Confirm Password:
           </label>
           <label>
           <input type="password" id="cpassword" name="cpassword"required>
-          <input type="checkbox" onclick="toggleCpaswd()">Show Password<br><br>
+          <input type="checkbox" onclick="togglePaswd()">Show Passwords<br><br>
           </label>
           <label>
           <input type="submit" value="Register Now!">
@@ -119,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
     <script type="text/JavaScript">
-    // Change the input type so the user can see the entered password
+    // Change the input type so the user can see the entered passwords
     function togglePaswd() {
       var x = document.getElementById("password");
       if (x.type === "password") {
@@ -127,10 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       } else {
         x.type = "password";
       }
-    }
 
-    // Change the input type so the user can see the entered confirmation password
-    function toggleCpaswd() {
       var y = document.getElementById("cpassword");
       if (y.type === "password") {
         y.type = "text";

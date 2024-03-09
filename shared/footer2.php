@@ -7,6 +7,10 @@
   <style>
     footer {
       text-align: left;
+      bottom: 0px;
+      position: fixed;
+      margin-left: 15px;
+      margin-bottom: 15px
     }
 
     footer h4 {
