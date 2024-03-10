@@ -12,7 +12,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
 
-    if ($password == $cpassword) {
+    // Add password complexity requirements
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+
+    if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+       // Password does not meet complexity requirements, display an error message
+       echo "<script>alert('WARNING!!! Your password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.');</script>";
+     }
+     elseif ($password != $cpassword)
+     {
+       // User password  do not match, display an error message
+       echo "<script>alert('WARNING!!! The passwords you entered did not match WARNING!!! ');</script>";
+     }
+     else
+     {
       // Query to check if the user exists
       $query = "SELECT * FROM Guests WHERE first_name = '$first_name' AND last_name = '$last_name' OR telephone = '$telephone' AND email = '$email' OR password = '$password'";
 
@@ -45,9 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           // Query execution failed, display an error message
           echo "<script>alert('Error: " . $con->error . "');</script>";
       }
-    } else {
-      // User password  do not match, display an error message
-      echo "<script>alert('WARNING!!! The passwords you entered did not match WARNING!!! ');</script>";
     }
 }
 ?>
